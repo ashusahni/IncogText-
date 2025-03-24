@@ -35,7 +35,7 @@ export interface User extends Document{
 const userSchema: Schema<User>= new Schema({
     username: {
         type: String,
-        required: [true, "user name is required"],
+        required: [true, "user name is required for the signing"],
         trim: true,
         unique: true
     },
