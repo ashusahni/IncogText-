@@ -10,7 +10,7 @@ const connection: ConnetionObject = {}
 
 async function dbConnect(): Promise<void> {
     if(connection.isConnected){
-        console.log("already connected to db")
+        console.log("already connected to the db")
         return
     }
 
@@ -19,7 +19,7 @@ async function dbConnect(): Promise<void> {
   connection.isConnected=  db.connections[0].readyState
     
   } catch (error) {
-    console.log('conection failed')
+    console.log('conection got failed ')
     process.exit(1)
   }
     
