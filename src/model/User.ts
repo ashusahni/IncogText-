@@ -13,7 +13,7 @@ const messageSchema: Schema<Message>= new Schema({
         type: String,
         required: true
     },
-    createdAt: {
+    createdAt: { 
         type: Date,
         required: true,
         default: Date.now
@@ -53,11 +53,11 @@ const userSchema: Schema<User>= new Schema({
     },
     verifyCode:{
         type: String,
-        required: [true, "verify code is required"]
+        required: [true, "verify code is required!"]
     },
     verifyCodeExpiry:{
         type: Date,
-        required: [true, " verifycode expiry  is required"]
+        required: [true, " verifycode expiry  is required "]
     },
     isVerified:{
         type: Boolean,
