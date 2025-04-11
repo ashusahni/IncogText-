@@ -1,5 +1,5 @@
 import { resend } from "@/lib/resend";
-import VerificationEmail from "../../emails/VerificationEmail"
+// import VerificationEmail from "../../emails/VerificationEmail"
 import { ApiResponse } from "@/types/apiResponse";
 import { promises } from "dns";
 
@@ -22,4 +22,8 @@ export async function sendVerificationEmail(email:string,username:string,verifyC
         console.log('error sending email')
         return {success: false, message: "failed to send verification mail"}
     }
+}
+
+function EmailTemplate(arg0: { firstName: string; }) {
+  throw new Error("Function not implemented.");
 }
