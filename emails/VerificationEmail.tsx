@@ -1,4 +1,4 @@
-  import { Section, Row, Text, Column, Link, Img } from "@react-email/components";
+import { Section, Row, Text, Column, Link, Img } from "@react-email/components";
 
 <Section className="my-[16px]">
   <Section className="mt-[42px]">

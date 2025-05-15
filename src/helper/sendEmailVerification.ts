@@ -7,9 +7,9 @@ export async function sendVerificationEmail(email:string,username:string,verifyC
     try {
         const { data, error } = await resend.emails.send({
             from: 'Acme <onboarding@resend.dev>',
-            to: ['delivered@resend.dev'],
-            subject: 'Hello world',
-            react: EmailTemplate({ firstName: 'John' }),
+            to: email,
+            subject: 'anoymous email verification',
+            react: VerificationEmail({ username, otp:verifyCode }),
           });
       
           if (error) {
@@ -25,5 +25,5 @@ export async function sendVerificationEmail(email:string,username:string,verifyC
 }
 
 function EmailTemplate(arg0: { firstName: string; }) {
-  throw new Error("Function not implemented.");
+  throw new Error("Function not implemnted.");
 }
